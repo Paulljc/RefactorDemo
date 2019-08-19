@@ -30,4 +30,15 @@ public class GlidedRoseTest {
         System.out.println(gildedRose.items[0]);
         Assert.assertEquals("Other, -2, 9", gildedRose.items[0].toString());
     }
+
+    @Test
+    public void should_return_Other_minus2_minus1_when_invoke_updateQuality_Other_minus1_minus1() {
+        Item[] items = new Item[]{new Item(OTHER, -1, -1)};
+        GildedRose gildedRose = new GildedRose(items);
+
+        gildedRose.updateQuality();
+
+        System.out.println(gildedRose.items[0]);
+        Assert.assertEquals("Other, -2, -1", gildedRose.items[0].toString());
+    }
 }
