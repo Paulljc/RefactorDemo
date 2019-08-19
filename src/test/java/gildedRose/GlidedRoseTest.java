@@ -43,7 +43,7 @@ public class GlidedRoseTest {
     }
 
     @Test
-    public void should_return_Sulfuras_11_11_when_invoke_updateQuality_Sulfuras_11_49() {
+    public void should_return_Sulfuras_11_49_when_invoke_updateQuality_Sulfuras_11_49() {
         Item[] items = new Item[]{new Item(SULFURAS, 11, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
@@ -51,5 +51,16 @@ public class GlidedRoseTest {
 
         System.out.println(gildedRose.items[0]);
         Assert.assertEquals("Sulfuras, Hand of Ragnaros, 11, 49", gildedRose.items[0].toString());
+    }
+
+    @Test
+    public void should_return_Sulfuras_minus1_49_when_invoke_updateQuality_Sulfuras_minus1_49() {
+        Item[] items = new Item[]{new Item(SULFURAS, -1, 49)};
+        GildedRose gildedRose = new GildedRose(items);
+
+        gildedRose.updateQuality();
+
+        System.out.println(gildedRose.items[0]);
+        Assert.assertEquals("Sulfuras, Hand of Ragnaros, -1, 49", gildedRose.items[0].toString());
     }
 }
