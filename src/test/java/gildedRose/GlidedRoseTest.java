@@ -107,4 +107,15 @@ public class GlidedRoseTest {
         System.out.println(gildedRose.items[0]);
         Assert.assertEquals("Backstage passes to a TAFKAL80ETC concert, -1, 0", gildedRose.items[0].toString());
     }
+
+    @Test
+    public void should_return_Aged_10_50_when_invoke_updateQuality_Aged_11_50() {
+        Item[] items = new Item[] {new Item(AGED, 11, 50)};
+        GildedRose gildedRose = new GildedRose(items);
+
+        gildedRose.updateQuality();
+
+        System.out.println(gildedRose.items[0]);
+        Assert.assertEquals("Aged Brie, 10, 50", gildedRose.items[0].toString());
+    }
 }
