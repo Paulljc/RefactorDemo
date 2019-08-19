@@ -8,6 +8,8 @@ public class Item {
 
     public int quality;
 
+    public ItemStrategy itemStrategy;
+
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
@@ -21,19 +23,23 @@ public class Item {
     }
 
     void updateItem() {
-        switch (name) {
-            case "Aged Brie":
-                new AgedBrieStrategy().updateItem(this);
-                break;
-            case "Backstage passes to a TAFKAL80ETC concert":
-                new BackstageStrategy().updateItem(this);
-                break;
-            case "Sulfuras, Hand of Ragnaros":
-                new SulfurasStrategy().updateItem(this);
-                break;
-            default:
-                new OtherStrategy().updateItem(this);
-                break;
-        }
+        itemStrategy.updateItem(this);
     }
+
+//    void updateItem() {
+//        switch (name) {
+//            case "Aged Brie":
+//                new AgedBrieStrategy().updateItem(this);
+//                break;
+//            case "Backstage passes to a TAFKAL80ETC concert":
+//                new BackstageStrategy().updateItem(this);
+//                break;
+//            case "Sulfuras, Hand of Ragnaros":
+//                new SulfurasStrategy().updateItem(this);
+//                break;
+//            default:
+//                new OtherStrategy().updateItem(this);
+//                break;
+//        }
+//    }
 }

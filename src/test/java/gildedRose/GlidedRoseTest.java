@@ -110,7 +110,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Aged_10_50_when_invoke_updateQuality_Aged_11_50() {
-        Item[] items = new Item[] {new Item(AGED, 11, 50)};
+        Item[] items = new Item[] {new AgedBrieItem(AGED, 11, 50)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -121,7 +121,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Aged_10_50_when_invoke_updateQuality_Aged_11_49() {
-        Item[] items = new Item[] {new Item(AGED, 11, 49)};
+        Item[] items = new Item[] {new AgedBrieItem(AGED, 11, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -132,7 +132,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Aged_minus2_50_when_invoke_updateQuality_Aged_minus1_48() {
-        Item[] items = new Item[] {new Item(AGED, -1, 48)};
+        Item[] items = new Item[] {new AgedBrieItem(AGED, -1, 48)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
