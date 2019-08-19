@@ -10,25 +10,25 @@ public class GlidedRoseTest {
     public static final String OTHER = "Other";
 
     @Test
-    public void should_return_Other_10_10_when_invoke_updateQuality_given_Other_11_11() {
-        Item[] items = new Item[]{new Item(OTHER, 11, 11)};
+    public void should_return_Other_10_48_when_invoke_updateQuality_given_Other_11_49() {
+        Item[] items = new Item[]{new Item(OTHER, 11, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
 
         System.out.println(gildedRose.items[0]);
-        Assert.assertEquals("Other, 10, 10", gildedRose.items[0].toString());
+        Assert.assertEquals("Other, 10, 48", gildedRose.items[0].toString());
     }
 
     @Test
-    public void should_return_Other_minus2_9_when_invoke_updateQuality_Other_minus1_11() {
-        Item[] items = new Item[]{new Item(OTHER, -1, 11)};
+    public void should_return_Other_minus2_47_when_invoke_updateQuality_Other_minus1_49() {
+        Item[] items = new Item[]{new Item(OTHER, -1, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
 
         System.out.println(gildedRose.items[0]);
-        Assert.assertEquals("Other, -2, 9", gildedRose.items[0].toString());
+        Assert.assertEquals("Other, -2, 47", gildedRose.items[0].toString());
     }
 
     @Test
@@ -62,5 +62,16 @@ public class GlidedRoseTest {
 
         System.out.println(gildedRose.items[0]);
         Assert.assertEquals("Sulfuras, Hand of Ragnaros, -1, 49", gildedRose.items[0].toString());
+    }
+
+    @Test
+    public void should_return_Backstage_9_50_when_invoke_updateQuality_Backstage_10_49() {
+        Item[] items = new Item[]{new Item(BACKSTAGE, 10, 49)};
+        GildedRose gildedRose = new GildedRose(items);
+
+        gildedRose.updateQuality();
+
+        System.out.println(gildedRose.items[0]);
+        Assert.assertEquals("Backstage passes to a TAFKAL80ETC concert, 9, 50", gildedRose.items[0].toString());
     }
 }
