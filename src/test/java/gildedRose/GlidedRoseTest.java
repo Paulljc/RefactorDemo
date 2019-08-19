@@ -129,4 +129,15 @@ public class GlidedRoseTest {
         System.out.println(gildedRose.items[0]);
         Assert.assertEquals("Aged Brie, 10, 50", gildedRose.items[0].toString());
     }
+
+    @Test
+    public void should_return_Aged_minus2_50_when_invoke_updateQuality_Aged_minus1_48() {
+        Item[] items = new Item[] {new Item(AGED, -1, 48)};
+        GildedRose gildedRose = new GildedRose(items);
+
+        gildedRose.updateQuality();
+
+        System.out.println(gildedRose.items[0]);
+        Assert.assertEquals("Aged Brie, -2, 50", gildedRose.items[0].toString());
+    }
 }
