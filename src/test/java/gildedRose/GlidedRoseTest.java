@@ -44,7 +44,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Sulfuras_11_49_when_invoke_updateQuality_Sulfuras_11_49() {
-        Item[] items = new Item[]{new Item(SULFURAS, 11, 49)};
+        Item[] items = new Item[]{new SulfurasItem(SULFURAS, 11, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -55,7 +55,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Sulfuras_minus1_49_when_invoke_updateQuality_Sulfuras_minus1_49() {
-        Item[] items = new Item[]{new Item(SULFURAS, -1, 49)};
+        Item[] items = new Item[]{new SulfurasItem(SULFURAS, -1, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
