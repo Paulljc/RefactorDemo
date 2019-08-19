@@ -1,6 +1,6 @@
 package gildedRose;
 
-public class OtherStrategy {
+public class OtherStrategy implements ItemStrategy{
 
     public void updateItem(Item item) {
         if (item.quality > 0) {

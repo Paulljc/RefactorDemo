@@ -1,6 +1,6 @@
 package gildedRose;
 
-public class AgedBrieStrategy {
+public class AgedBrieStrategy implements ItemStrategy{
 
     public void updateItem(Item item) {
         if (item.quality < 50) {

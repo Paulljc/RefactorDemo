@@ -21,8 +21,7 @@ public class Item {
     }
 
     void updateItem() {
-        String itemName = name;
-        switch (itemName) {
+        switch (name) {
             case "Aged Brie":
                 new AgedBrieStrategy().updateItem(this);
                 break;

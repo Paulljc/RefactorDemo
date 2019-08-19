@@ -1,6 +1,6 @@
 package gildedRose;
 
-public class BackstageStrategy {
+public class BackstageStrategy implements ItemStrategy{
 
     public void updateItem(Item item) {
         if (item.quality < 50) {
