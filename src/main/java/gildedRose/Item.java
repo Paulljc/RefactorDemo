@@ -8,7 +8,6 @@ public class Item {
 
     public int quality;
 
-
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
@@ -16,8 +15,8 @@ public class Item {
     }
 
 
-   @Override
-   public String toString() {
+    @Override
+    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
 
@@ -34,15 +33,7 @@ public class Item {
                 new SulfurasStrategy().updateItem(this);
                 break;
             default:
-                if (quality > 0) {
-                    quality--;
-                }
-                sellIn = sellIn - 1;
-                if (sellIn < 0) {
-                    if (quality > 0) {
-                        quality = quality - 1;
-                    }
-                }
+                new OtherStrategy().updateItem(this);
                 break;
         }
     }
