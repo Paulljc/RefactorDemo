@@ -31,6 +31,7 @@ public class Item {
                 new BackstageStrategy().updateItem(this);
                 break;
             case "Sulfuras, Hand of Ragnaros":
+                new SulfurasStrategy().updateItem(this);
                 break;
             default:
                 if (quality > 0) {
