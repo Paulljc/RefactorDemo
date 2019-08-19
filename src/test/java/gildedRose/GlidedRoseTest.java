@@ -66,7 +66,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Backstage_9_50_when_invoke_updateQuality_Backstage_10_49() {
-        Item[] items = new Item[]{new Item(BACKSTAGE, 10, 49)};
+        Item[] items = new Item[]{new BackstageItem(BACKSTAGE, 10, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -77,7 +77,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Backstage_9_50_when_invoke_updateQuality_Backstage_10_48() {
-        Item[] items = new Item[]{new Item(BACKSTAGE, 10, 48)};
+        Item[] items = new Item[]{new BackstageItem(BACKSTAGE, 10, 48)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -88,7 +88,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Backstage_3_50_when_invoke_updateQuality_Backstage_4_47() {
-        Item[] items = new Item[] {new Item(BACKSTAGE, 4, 47)};
+        Item[] items = new Item[] {new BackstageItem(BACKSTAGE, 4, 47)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -99,7 +99,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Backstage_minus1_0_when_invoke_updateQuality_Backstage_0_50() {
-        Item[] items = new Item[] {new Item(BACKSTAGE, 0, 50)};
+        Item[] items = new Item[] {new BackstageItem(BACKSTAGE, 0, 50)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
