@@ -25,15 +25,7 @@ public class Item {
         String itemName = name;
         switch (itemName) {
             case "Aged Brie":
-                if (quality < 50) {
-                    quality++;
-                }
-                sellIn--;
-                if (sellIn < 0) {
-                    if (quality < 50) {
-                        quality++;
-                    }
-                }
+                new AgedBrieStrategy().updateItem(this);
                 break;
             case "Backstage passes to a TAFKAL80ETC concert":
                 if (quality < 50) {
