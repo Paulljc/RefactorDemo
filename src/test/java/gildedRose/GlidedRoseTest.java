@@ -11,7 +11,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Other_10_48_when_invoke_updateQuality_given_Other_11_49() {
-        Item[] items = new Item[]{new Item(OTHER, 11, 49)};
+        Item[] items = new Item[]{new OtherItem(OTHER, 11, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -22,7 +22,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Other_minus2_47_when_invoke_updateQuality_Other_minus1_49() {
-        Item[] items = new Item[]{new Item(OTHER, -1, 49)};
+        Item[] items = new Item[]{new OtherItem(OTHER, -1, 49)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();
@@ -33,7 +33,7 @@ public class GlidedRoseTest {
 
     @Test
     public void should_return_Other_minus2_minus1_when_invoke_updateQuality_Other_minus1_minus1() {
-        Item[] items = new Item[]{new Item(OTHER, -1, -1)};
+        Item[] items = new Item[]{new OtherItem(OTHER, -1, -1)};
         GildedRose gildedRose = new GildedRose(items);
 
         gildedRose.updateQuality();

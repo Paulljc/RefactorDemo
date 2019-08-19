@@ -26,20 +26,4 @@ public class Item {
         itemStrategy.updateItem(this);
     }
 
-//    void updateItem() {
-//        switch (name) {
-//            case "Aged Brie":
-//                new AgedBrieStrategy().updateItem(this);
-//                break;
-//            case "Backstage passes to a TAFKAL80ETC concert":
-//                new BackstageStrategy().updateItem(this);
-//                break;
-//            case "Sulfuras, Hand of Ragnaros":
-//                new SulfurasStrategy().updateItem(this);
-//                break;
-//            default:
-//                new OtherStrategy().updateItem(this);
-//                break;
-//        }
-//    }
 }
